@@ -1,0 +1,9 @@
+Welcome to this humble LateX package that allows you to draw PIDs or block diagrams quickly and efficiently. It contains pre-built assets in pgf to create PID drawings in LateX as many chemical engineering students have to do this in their projects. We chose for pgf because it is much faster than TikZ objects, and the Overleaf compile time keeps shortening.  
+
+We worked long and hard to bring this to you and we really hope that it helps your in you endeavors! If you would have any remarks or questions, then please do reach out!
+
+
+Kind regards,
+
+Roel Raike
+Casper Janssen
