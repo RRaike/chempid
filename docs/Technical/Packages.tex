@@ -1,5 +1,11 @@
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage{babel}
+\babelprovide[main]{english}
+\addto\captionsenglish{%
+  \renewcommand{\contentsname}{Contents}%
+  \renewcommand{\figurename}{Figure}%
+  \renewcommand{\tablename}{Table}%
+}
 
 \usepackage{graphicx}
 \usepackage{wrapfig}
