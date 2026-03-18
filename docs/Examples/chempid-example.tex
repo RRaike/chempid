@@ -1,0 +1,112 @@
+\begin{center}
+    \begin{tikzpicture}
+            
+            \node[dished tank, scale = 2] (Tank) at (-2, -2) {};
+            \node[xshift = -1cm](start) at (Tank.far northwest) {};
+            \node[connection, /connection= flanged, scale = 0.75] (N1) at (Tank.far northwest) {};
+            \node[connection, /connection= flanged, scale = 0.75] (N2) at (Tank.far northeast) {};
+            \node[connection, /connection= flanged, scale = 0.75] (N6) at (Tank.far southwest) {};
+            \node[connection, /connection= flanged, scale = 0.75] (M1) at (Tank.far southeast) {};
+            \node[connection, /connection= flanged, scale = 0.75, yshift = -0.5cm, rotate = 90] (N3) at (Tank.south) {};
+
+            \node[valve, /valve= safety, /valve= spring loaded, /valve= angle, /valve=globe, xshift = 4.5 cm] (P6) at (Tank.far northeast) {};
+            
+            \node[valve, /valve = butterfly, /valve = basic, xshift = 1cm, yshift = -1cm] (V1) at (Tank.south) {};
+            \node[pump, /pump = centrifugal, xshift = 3.5cm, yshift = -1cm] (P001) at (Tank.south) {};
+
+            \node[reducer, xshift = -0.75cm, scale = 0.5] (R1) at (P001.west) {};
+            \node[connection, /connection= flanged, xshift = -0.25cm, scale = 0.75] (F1) at (P001.west) {};
+            \node[reducer, xshift = 0.75cm, scale = 0.5, rotate = 180] (R2) at (P001.east) {};
+            \node[connection, /connection= flanged, xshift = 0.25cm, scale = 0.75] (F2) at (P001.east) {};
+
+            \node[valve, /valve=check, /valve = basic, xshift = 3 cm] (V2) at (R2.east) {};
+            \node[valve, /valve = butterfly, /valve= basic, xshift = 4 cm] (V3) at (R2.east) {};
+
+            \node[xshift = 1cm] (end) at (V3.west) {}; 
+
+            \draw[>-] (start) -- (N1.west);
+            \draw[-] (N1.east) -- (Tank.near northwest);
+            \draw[-] (N6.east) -- (Tank.near southwest);
+            \draw[-] (M1.west) -- (Tank.near southeast);
+
+            \draw[-] (Tank.near northeast) -- (N2.west);
+            \draw[-] (N2.east) -- (P6.west);
+            \draw[-] (P6.far south) |- (V2.west);
+
+            \draw[-] (Tank.south) -- (N3.east);
+            \draw[-] (N3.west) |- (V1.west);
+            \draw[-] (V1.east) -- (R1.west);
+            \draw[-] (R1.east) -- (F1.west);
+            \draw[-] (F1.east) -- (P001.west);
+            \draw[-] (P001.east) -- (F2.west);
+            \draw[-] (F2.east) -- (R2.east);
+            \draw[-] (R2.west) -- (V2.west);
+            \draw[-] (V2.east) -- (V3.west);
+            \draw[->] (V3.east) -- (end);
+            
+    \end{tikzpicture}
+\end{center}
+
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\begin{center}
+\begin{tikzpicture}
+
+\node[dished tank, scale = 2] (Tank) at (-2, -2) {};
+\node[xshift = -1cm](start) at (Tank.far northwest) {};
+\node[connection, /connection= flanged, scale = 0.75] (N1) 
+ at (Tank.far northwest) {};
+\node[connection, /connection= flanged, scale = 0.75] (N2) 
+ at (Tank.far northeast) {};
+\node[connection, /connection= flanged, scale = 0.75] (N6) 
+ at (Tank.far southwest) {};
+\node[connection, /connection= flanged, scale = 0.75] (M1) 
+ at (Tank.far southeast) {};
+\node[connection, /connection= flanged, scale = 0.75, yshift = -0.5cm, 
+ rotate = 90] (N3) at (Tank.south) {};
+
+\node[valve, /valve= safety, /valve= spring loaded, /valve= angle, 
+ /valve=globe, xshift = 4.5 cm] (P6) at (Tank.far northeast) {};
+
+\node[valve, /valve = butterfly, /valve = basic, xshift = 1cm, 
+ yshift = -1cm] (V1) at (Tank.south) {};
+\node[pump, /pump = centrifugal, xshift = 3.5cm, yshift = -1cm] (P001)  
+ at (Tank.south) {};
+
+\node[reducer, xshift = -0.75cm, scale = 0.5] (R1) at (P001.west) {};
+\node[connection, /connection= flanged, xshift = -0.25cm, 
+ scale = 0.75] (F1) at (P001.west) {};
+\node[reducer, xshift = 0.75cm, scale = 0.5, rotate = 180] (R2) 
+ at (P001.east) {};
+\node[connection, /connection= flanged, xshift = 0.25cm, scale = 0.75] 
+ (F2) at (P001.east) {};
+
+\node[valve, /valve=check, /valve=basic, xshift=3cm] (V2) 
+ at (R2.east) {};
+\node[valve, /valve=butterfly, /valve=basic, xshift=4cm] (V3) 
+ at (R2.east) {};
+
+\node[xshift = 1cm] (end) at (V3.west) {}; 
+
+\draw[>-] (start) -- (N1.west);
+\draw[-] (N1.east) -- (Tank.near northwest);
+\draw[-] (N6.east) -- (Tank.near southwest);
+\draw[-] (M1.west) -- (Tank.near southeast);
+
+\draw[-] (Tank.near northeast) -- (N2.west);
+\draw[-] (N2.east) -- (P6.west);
+\draw[-] (P6.far south) |- (V2.west);
+
+\draw[-] (Tank.south) -- (N3.east);
+\draw[-] (N3.west) |- (V1.west);
+\draw[-] (V1.east) -- (R1.west);
+\draw[-] (R1.east) -- (F1.west);
+\draw[-] (F1.east) -- (P001.west);
+\draw[-] (P001.east) -- (F2.west);
+\draw[-] (F2.east) -- (R2.east);
+\draw[-] (R2.west) -- (V2.west);
+\draw[-] (V2.east) -- (V3.west);
+\draw[->] (V3.east) -- (end);
+
+\end{tikzpicture}
+\end{center}
+\end{lstlisting}
