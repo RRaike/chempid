@@ -1,0 +1,99 @@
+\begin{center}
+    \begin{tikzpicture}
+            \node[column, /column= bubble caps, yscale = 4, xscale = 2] (column) at (-2, -2) {};
+            \node[HE round, /HE round = m, xshift = 3cm, yshift = 0.5cm, rotate = 90] (condensor) at (column.north) {};
+            \node[dished tank, xshift = 2cm, rotate = 90, scale = 0.5] (reflux_drum) at (column.near northeast) {};
+
+            \node[HE round, /HE round = m, xshift = 3cm, yshift = -0.5cm, rotate = 270] (reboiler) at (column.south) {};
+
+            \node[valve, /valve = basic, xshift = -0.6cm] (v_reflux) at (reflux_drum.north) {};
+            \node[valve, /valve = basic, yshift = 0.5cm, rotate = 90] (v_condensor) at (condensor.far northeast) {};
+            \node[valve, /valve = basic, yshift = -0.5cm, rotate = 90] (v_reboiler) at (reboiler.far northeast) {};
+
+            \node[xshift=-3cm] (start) at (column.west) {};
+            \node[xshift = 4cm] (end_light) at (column.near northeast) {};
+            \node[xshift = 5cm, yshift = -0.5cm,] (end_heavy) at (column.south) {};
+
+            \node[yshift = 0.5cm] (start_condensor) at (v_condensor.east) {};
+            \node[yshift = 1.2cm] (end_condensor) at (condensor.far southeast) {};
+
+            \node[yshift = -0.5cm] (start_reboiler) at (v_reboiler.west) {};
+            \node[yshift = -1.2cm] (end_reboiler) at (reboiler.far southeast) {};
+
+
+            \draw[->] (start) -- (column.west);
+
+            \draw[->] (column.north) |- (condensor.north);
+            \draw[->] (condensor.west) -- (reflux_drum.east);
+            \draw[->] (reflux_drum.north) -- (v_reflux.east);
+            \draw[->] (v_reflux.west) -- (column.near northeast);
+            \draw[->] (reflux_drum.south) -- (end_light);
+
+            \draw[->] (start_condensor) -- (v_condensor.east);
+            \draw[-] (v_condensor.west) -- (condensor.far northeast);
+            \draw[->] (condensor.far southeast) -- (end_condensor);
+
+            \draw[->] (column.south) |- (reboiler.south);
+            \draw[->] (reboiler.west) |- (column.near southeast);
+            \draw[->] (reboiler.north) -- (end_heavy);
+
+            \draw[->] (start_reboiler) -- (v_reboiler.west);
+            \draw[-] (v_reboiler.east) -- (reboiler.far northeast);
+            \draw[->] (reboiler.far southeast) -- (end_reboiler);
+    \end{tikzpicture}
+\end{center}
+
+\begin{lstlisting}[language={[LaTeX]TeX}]
+\begin{center}
+\begin{tikzpicture}
+\node[column, /column= bubble caps, yscale = 4, xscale = 2] 
+ (column) at (-2, -2) {};
+\node[HE round, /HE round = m, xshift = 3cm, yshift = 0.5cm, 
+ rotate = 90] (condensor) at (column.north) {};
+\node[dished tank, xshift = 2cm, rotate = 90, scale = 0.5] 
+ (reflux_drum) at (column.near northeast) {};
+
+\node[HE round, /HE round = m, xshift = 3cm, yshift = -0.5cm, 
+ rotate = 270] (reboiler) at (column.south) {};
+
+\node[valve, /valve = basic, xshift = -0.6cm] (v_reflux) at 
+ (reflux_drum.north) {};
+\node[valve, /valve = basic, yshift = 0.5cm, rotate = 90] 
+ (v_condensor) at (condensor.far northeast) {};
+\node[valve, /valve = basic, yshift = -0.5cm, rotate = 90] 
+ (v_reboiler) at (reboiler.far northeast) {};
+
+\node[xshift=-3cm] (start) at (column.west) {};
+\node[xshift = 4cm] (end_light) at (column.near northeast) {};
+\node[xshift = 5cm, yshift = -0.5cm,] (end_heavy) at 
+ (column.south) {};
+
+\node[yshift = 0.5cm] (start_condensor) at (v_condensor.east) {};
+\node[yshift = 1.2cm] (end_condensor) at (condensor.far southeast) {};
+
+\node[yshift = -0.5cm] (start_reboiler) at (v_reboiler.west) {};
+\node[yshift = -1.2cm] (end_reboiler) at (reboiler.far southeast) {};
+
+
+\draw[->] (start) -- (column.west);
+
+\draw[->] (column.north) |- (condensor.north);
+\draw[->] (condensor.west) -- (reflux_drum.east);
+\draw[->] (reflux_drum.north) -- (v_reflux.east);
+\draw[->] (v_reflux.west) -- (column.near northeast);
+\draw[->] (reflux_drum.south) -- (end_light);
+
+\draw[->] (start_condensor) -- (v_condensor.east);
+\draw[-] (v_condensor.west) -- (condensor.far northeast);
+\draw[->] (condensor.far southeast) -- (end_condensor);
+
+\draw[->] (column.south) |- (reboiler.south);
+\draw[->] (reboiler.west) |- (column.near southeast);
+\draw[->] (reboiler.north) -- (end_heavy);
+
+\draw[->] (start_reboiler) -- (v_reboiler.west);
+\draw[-] (v_reboiler.east) -- (reboiler.far northeast);
+\draw[->] (reboiler.far southeast) -- (end_reboiler);
+\end{tikzpicture}
+\end{center}
+\end{lstlisting}

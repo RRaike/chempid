@@ -42,9 +42,13 @@
 
 \newpage
 
+% ... your section content ...
+% \write18{Time: %time% > test.txt}
+\write18{powershell -Command "(Get-Date).TimeOfDay.TotalMilliseconds | Out-File start.txt"}
 \section{Introduction}
     \subimport{docs/}{Introduction.tex}
 
+\write18{powershell -Command "(Get-Date).TimeOfDay.TotalMilliseconds | Out-File start.txt -Append"}
     
 \newpage
 \section{Anchors}
@@ -54,11 +58,6 @@
     \subimport{docs/}{Options.tex}
 
 \newpage
-\section{Example with code}
-    \subimport{docs/Examples/}{chempid-example.tex}
-
-\newpage
-
 \section{Assets}
     \label{sec: Assets}
     \subsection{Valves}
@@ -169,4 +168,12 @@
     \subsection{Fittings}
         \subimport{docs/Sections/Fittings/}{fittings_base.tex}
     
+\newpage
+\section{Examples}
+    \subsection{Distillation column with bubble caps}
+        \subimport{docs/Examples/}{chempid-example-distillation.tex}
+
+    \subsection{Tank}
+        \subimport{docs/Examples/}{chempid-example-tank.tex}
+
 \end{document}
