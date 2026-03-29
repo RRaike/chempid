@@ -44,11 +44,11 @@
 
 % ... your section content ...
 % \write18{Time: %time% > test.txt}
-\write18{powershell -Command "(Get-Date).TimeOfDay.TotalMilliseconds | Out-File start.txt"}
+% \write18{powershell -Command "(Get-Date).TimeOfDay.TotalMilliseconds | Out-File start.txt"}
 \section{Introduction}
     \subimport{docs/}{Introduction.tex}
 
-\write18{powershell -Command "(Get-Date).TimeOfDay.TotalMilliseconds | Out-File start.txt -Append"}
+% \write18{powershell -Command "(Get-Date).TimeOfDay.TotalMilliseconds | Out-File start.txt -Append"}
     
 \newpage
 \section{Anchors}
