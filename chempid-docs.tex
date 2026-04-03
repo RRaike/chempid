@@ -6,19 +6,17 @@
 
 \usepackage{chempid}
 
-\renewcommand{\theparagraph}{\thesubsubsection.\arabic{paragraph}}
-\setcounter{secnumdepth}{4}
-\setcounter{tocdepth}{4}       % Put subsubsections in the table of contents
+% \renewcommand{\theparagraph}{\thesubsubsection.\arabic{paragraph}}
+% \setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}       % Put subsubsections in the table of contents
 
 \begin{document}
 
 \begin{center}
     \vspace*{1cm}
+    \includegraphics[width=0.8\textwidth]{docs/Images/chempid_logo.jpeg}
 
-    
-    \includegraphics[width=\textwidth]{docs/Images/chempid_logo.png}
-
-    \vspace*{-2.5cm}
+    \vspace*{2.5cm}
 
     \textbf{ChemPID: A Tikz-based PID drawer for \LaTeX}
 
@@ -61,112 +59,52 @@
 \section{Assets}
     \label{sec: Assets}
     \subsection{Valves}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Valves/}{valves_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Valves/}{valves_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-valves.tex}
 
     \subsection{Round heat exchanger}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/HE/}{heRound_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/HE/}{heRound_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-heRound.tex}
 
     \subsection{Rectangular heat exchanger}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/HE/}{heRect_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/HE/}{heRect_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-heRect.tex}
 
     \subsection{Columns}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Columns/}{columns_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Columns/}{columns_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-columns.tex}
 
     \subsection{Pumps}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Pumps/}{pumps_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Pumps/}{pumps_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-pumps.tex}
 
     \subsection{Compressors}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Compressors/}{compressors_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Compressors/}{compressors_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-compressors.tex}
 
     \subsection{Separators}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Separators/}{separators_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Separators/}{separators_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-separators.tex}
 
     \subsection{Tanks}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Tanks/}{tanks_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Tanks/}{tanks_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-tanks.tex}
 
     \subsection{Crushers}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Crushers/}{crushers_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Crushers/}{crushers_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-crushers.tex}
 
     \subsection{Mills}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Mills/}{mills_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Mills/}{mills_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-mills.tex}
 
     \subsection{Press}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Press/}{press_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Press/}{press_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-press.tex}
 
     \subsection{Cooling towers}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/CoolingTowers/}{coolingTower_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/CoolingTowers/}{coolingTower_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-coolingTowers.tex}
 
     \subsection{Driers}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/Driers/}{driers_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/Driers/}{driers_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-driers.tex}
 
     \subsection{Gas filters}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/GasFilters/}{gasFilters_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/GasFilters/}{gasfilters_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-gasFilters.tex}
     
     \subsection{Liquid filters}
-        \subsubsection{Anchors}
-            \subimport{docs/Sections/LiquidFilters/}{liquidFilters_base.tex}
-
-        \subsubsection{Options}
-            \subimport{docs/Sections/LiquidFilters/}{liquidFilters_options.tex}
+        \subimport{docs/Assets/}{chempid-docs-liquidFilters.tex}
         
     \subsection{Fittings}
-        \subimport{docs/Sections/Fittings/}{fittings_base.tex}
+        \subimport{docs/Assets/}{chempid-docs-fittings.tex}
     
 \newpage
 \section{Examples}

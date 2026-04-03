@@ -1,10 +1,12 @@
+\paragraph{Anchors}
+
 \begin{center}
     \begin{tikzpicture}
             \draw[step = 0.5cm, gray, very thin] (-4.25, -2.25) grid (4.25, 0.25);
             
-            \node[drier] (Bempty) at (-1.5, -1.0) {};
-            \node[anchor = south] at (0, 0.25) {\textbf{\textbackslash node[drier]}};
-            \node[drier] (B) at (1.5, -1.0) {};
+            \node[gas filter] (Bempty) at (-1.5, -1.0) {};
+            \node[anchor = south] at (0, 0.25) {\textbf{\textbackslash node[gas filter]}};
+            \node[gas filter] (B) at (1.5, -1.0) {};
             \node[cross] at (B.center) {};
             \node[anchor = west, font = \tiny] at (B.center) {C};
             \node[cross] at (B.east) {};
@@ -30,15 +32,39 @@
             \node[cross] at (B.far northwest) {};
             \node[anchor = south east, font = \tiny] at (B.far northwest) {fNW};
             
-
             \node[cross] at (B.southeast) {};
-            \node[anchor = north west, font = \tiny] at (B.southeast) {SE};
+            \node[anchor = west, font = \tiny] at (B.southeast) {SE};
             \node[cross] at (B.near southeast) {};
             \node[anchor = west, font = \tiny] at (B.near southeast) {nSE};
+            \node[cross] at (B.far southeast) {};
+            \node[anchor = north west, font = \tiny] at (B.far southeast) {fSE};
             
             \node[cross] at (B.southwest) {};
-            \node[anchor = north east, font = \tiny] at (B.southwest) {SW};
+            \node[anchor = east, font = \tiny] at (B.southwest) {SW};
             \node[cross] at (B.near southwest) {};
             \node[anchor = east, font = \tiny] at (B.near southwest) {nSW};
+            \node[cross] at (B.far southwest) {};
+            \node[anchor = north east, font = \tiny] at (B.far southwest) {fSW};
+    \end{tikzpicture}
+\end{center}
+
+\paragraph{Options}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[step = 0.5cm, gray, very thin] (-7.25, -2.25) grid (7.25, 0.25);
+
+        \node[gas filter, /gas filter = bag] (A) at (-3.0, -1.0) {};
+        \node[anchor = south] at (-3.0, 0.25) {\textbf{bag}};
+
+        \node[gas filter, /gas filter = bed] (A) at (-1.0, -1.0) {};
+        \node[anchor = south] at (-1.0, 0.25) {\textbf{bed}};
+
+        \node[gas filter, /gas filter = hepa] (A) at (1.0, -1.0) {};
+        \node[anchor = south] at (1.0, 0.25) {\textbf{hepa}};
+
+        \node[gas filter, /gas filter = belt] (A) at (3.0, -1.0) {};
+        \node[anchor = south] at (3.0, 0.25) {\textbf{belt}};
+
     \end{tikzpicture}
 \end{center}
