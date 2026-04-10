@@ -1,3 +1,46 @@
+\paragraph{Anchors}
+A valve is one of the cornerstones of a flowsheet or P\&ID. 
+The base asset for a valve in this package is only half of a two-way valve to allow for maximal flexibility.
+
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[step = 0.5cm, gray, very thin] (-3.25, -2.25) grid (3.25, 0.25);
+
+        \node[valve, scale = 4] (Bempty) at (-1.5, -1.0) {};
+        \node[anchor = south] at (0, 0.25) {\textbf{\textbackslash node[valve, scale = 4]}};
+        \node[valve, scale = 4] (B) at (1.5, -1.0) {};
+        \node[cross] at (B.center) {};
+        \node[anchor = west, font = \tiny] at (B.center) {C};
+        \node[cross] at (B.east) {};
+        \node[anchor = west, font = \tiny] at (B.east) {E};
+        \node[cross] at (B.west) {};
+        \node[anchor = east, font = \tiny] at (B.west) {W};
+        \node[cross] at (B.near north) {};
+        \node[anchor = west, font = \tiny] at (B.near north) {nN};
+        \node[cross] at (B.north) {};
+        \node[anchor = west, font = \tiny] at (B.north) {N};
+        \node[cross] at (B.far north) {};
+        \node[anchor = west, font = \tiny] at (B.far north) {fN};
+        \node[cross] at (B.near south) {};
+        \node[anchor = west, font = \tiny] at (B.near south) {nS};
+        \node[cross] at (B.south) {};
+        \node[anchor = west, font = \tiny] at (B.south) {S};
+        \node[cross] at (B.far south) {};
+        \node[anchor = west, font = \tiny] at (B.far south) {fS};
+        \node[cross] at (B.northeast) {};
+        \node[anchor = west, font = \tiny] at (B.northeast) {NE};
+        \node[cross] at (B.southeast) {};
+        \node[anchor = west, font = \tiny] at (B.southeast) {SE};
+        \node[cross] at (B.northwest) {};
+        \node[anchor = east, font = \tiny] at (B.northwest) {NW};
+        \node[cross] at (B.southwest) {};
+        \node[anchor = east, font = \tiny] at (B.southwest) {SW};
+    \end{tikzpicture}
+\end{center}
+
+\paragraph{Options}
+
 \begin{center}
     \begin{tikzpicture}
         \draw[step = 0.5cm, gray, very thin] (-7.25, -1.25) grid (7.25, 0.25);

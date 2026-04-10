@@ -1,3 +1,5 @@
+\paragraph{Anchors}
+
 \begin{center}
     \begin{tikzpicture}
             \draw[step = 0.5cm, gray, very thin] (-3.25, -3.25) grid (3.25, 0.25);
@@ -37,5 +39,41 @@
             \node[anchor = east, font = \tiny] at (B.near southwest) {nSW};
 
 
+    \end{tikzpicture}
+\end{center}
+
+\paragraph{Options}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[step = 0.5cm, gray, very thin] (-7.25, -1.75) grid (7.25, 0.25);
+
+        \node[column, /column= tray] (A) at (-6.0, -0.75) {};
+        \node[anchor = south] at (-6.0, 0.25) {\textbf{tray}};
+
+        \node[column, /column= fluidized] (A) at (-2.0, -0.75) {};
+        \node[anchor = south] at (-2.0, 0.25) {\textbf{fluidized}};
+
+        \node[column, /column= fixed] (A) at (2.0, -0.75) {};
+        \node[anchor = south] at (2.0, 0.25) {\textbf{fixed}};
+        
+        \node[column, /column= staggered baffle] (A) at (6.0, -0.75) {};
+        \node[anchor = south] at (6.0, 0.25) {\textbf{staggered baffle}};
+    \end{tikzpicture}
+\\[0.25cm]
+    \begin{tikzpicture}
+        \draw[step = 0.5cm, gray, very thin] (-7.25, -1.75) grid (7.25, 0.25);
+
+        \node[column, /column= bubble caps] (A) at (-6.0, -0.75) {};
+        \node[anchor = south] at (-6.0, 0.25) {\textbf{bubble caps}};
+
+        \node[column, /column= valve] (A) at (-2.0, -0.75) {};
+        \node[anchor = south] at (-2.0, 0.25) {\textbf{valve}};
+
+        \node[column, /column= double fixed] (A) at (2.0, -0.75) {};
+        \node[anchor = south] at (2.0, 0.25) {\textbf{double fixed}};
+        
+        \node[column, /column= spray] (A) at (6.0, -0.75) {};
+        \node[anchor = south] at (6.0, 0.25) {\textbf{spray}};
     \end{tikzpicture}
 \end{center}

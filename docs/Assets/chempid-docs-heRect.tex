@@ -1,3 +1,5 @@
+\paragraph{Anchors}
+
 \begin{center}
     \begin{tikzpicture}
             \draw[step = 0.5cm, gray, very thin] (-5.25, -2.25) grid (5.25, 0.25);
@@ -44,5 +46,35 @@
             \node[anchor = north, font = \tiny] at (B.near southwest) {nSW};
             \node[cross] at (B.far southwest) {};
             \node[anchor = north east, font = \tiny] at (B.far southwest) {fSW};
+    \end{tikzpicture}
+\end{center}
+
+\paragraph{Options}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[step = 0.5cm, gray, very thin] (-7.25, -1.25) grid (7.25, 0.25);
+
+        \node[HE rect, /HE rect= straight] (A) at (-5.0, -0.5) {};
+        \node[anchor = south] at (-5.0, 0.25) {\textbf{straight}};
+
+        \node[HE rect, /HE rect= floating] (A) at (-1.5, -0.5) {};
+        \node[anchor = south] at (-1.5, 0.25) {\textbf{floating}};
+
+        \node[HE rect, /HE rect= u] (A) at (1.5, -0.5) {};
+        \node[anchor = south] at (1.5, 0.25) {\textbf{u}};
+
+        \node[HE rect, /HE rect= plate] (A) at (5.0, -0.5) {};
+        \node[anchor = south] at (5.0, 0.25) {\textbf{plate}};
+    \end{tikzpicture}
+\\[0.25cm]
+    \begin{tikzpicture}
+        \draw[step = 0.5cm, gray, very thin] (-7.25, -1.25) grid (7.25, 0.25);
+
+        \node[HE rect, /HE rect= coil] (A) at (-1.5, -0.5) {};
+        \node[anchor = south] at (-1.5, 0.25) {\textbf{coil}};
+
+        \node[HE rect, /HE rect= finned] (A) at (1.5, -0.5) {};
+        \node[anchor = south] at (1.5, 0.25) {\textbf{finned}};
     \end{tikzpicture}
 \end{center}

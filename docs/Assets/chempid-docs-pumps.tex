@@ -1,3 +1,5 @@
+\paragraph{Anchors}
+
 \begin{center}
     \begin{tikzpicture}
             \draw[step = 0.5cm, gray, very thin] (-3.25, -3.25) grid (3.25, 0.25);
@@ -24,5 +26,38 @@
             \node[anchor = south east, font = \tiny] at (B.northwest) {NW};
             \node[cross] at (B.southwest) {};
             \node[anchor = north east, font = \tiny] at (B.southwest) {SW};
+    \end{tikzpicture}
+\end{center}
+
+\paragraph{Options}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[step = 0.5cm, gray, very thin] (-7.25, -1.25) grid (7.25, 0.25);
+
+        \node[pump, /pump = centrifugal] (A) at (-6.0, -0.5) {};
+        \node[anchor = south] at (-6.0, 0.25) {\textbf{centrifugal}};
+
+        \node[pump, /pump = reciprocating] (A) at (-3.0, -0.5) {};
+        \node[anchor = south] at (-3.0, 0.25) {\textbf{reciprocating}};
+
+        \node[pump, /pump = gear] (A) at (0, -0.5) {};
+        \node[anchor = south] at (0, 0.25) {\textbf{gear}};
+
+        \node[pump, /pump = screw] (A) at (3.0, -0.5) {};
+        \node[anchor = south] at (3.0, 0.25) {\textbf{screw}};
+
+        \node[pump, /pump = cavity] (A) at (6.0, -0.5) {};
+        \node[anchor = south] at (6.0, 0.25) {\textbf{cavity}};
+    \end{tikzpicture}
+    \\[0.25cm]
+    \begin{tikzpicture}
+        \draw[step = 0.5cm, gray, very thin] (-7.25, -1.25) grid (7.25, 0.25);
+
+        \node[pump, /pump = diaphragm] (A) at (-3.0, -0.5) {};
+        \node[anchor = south] at (-3.0, 0.25) {\textbf{diaphragm}};
+
+        \node[pump, /pump = jet] (A) at (3.0, -0.5) {};
+        \node[anchor = south] at (3.0, 0.25) {\textbf{jet}};
     \end{tikzpicture}
 \end{center}
